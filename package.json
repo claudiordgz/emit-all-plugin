@@ -1,7 +1,7 @@
 {
-  "name": "webpack-emit-all-plugin",
-  "version": "2.0.1",
-  "description": "webpack, without the `pack`",
+  "name": "emit-all-plugin",
+  "version": "1.0.1",
+  "description": "Based on webpack-emit-all-plugin",
   "main": "index.js",
   "engines": {
     "node": ">=7",
@@ -22,16 +22,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DrewML/webpack-emit-all-plugin.git"
+    "url": "git+https://github.com/claudiordgz/emit-all-plugin.git"
   },
   "keywords": [
     "webpack",
     "emit"
   ],
   "author": "Andrew Levine",
+  "contributors": [
+    "claudiordgz <claudio.rdgz@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DrewML/webpack-emit-all-plugin/issues"
+    "url": "https://github.com/claudiordgz/emit-all-plugin/issues"
   },
-  "homepage": "https://github.com/DrewML/webpack-emit-all-plugin#readme"
+  "homepage": "https://github.com/claudiordgz/emit-all-plugin#readme"
 }

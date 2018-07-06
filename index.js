@@ -5,10 +5,12 @@ module.exports = class EmitAllPlugin {
         this.ignorePattern = opts.ignorePattern || /node_modules/;
         this.ignoreExternals = !!opts.ignoreExternals;
         this.path = opts.path;
+        this.filenameTransform =
+            opts.filenameTransform || (filename => filename);
     }
 
     shouldIgnore(path) {
-        return this.ignorePattern.test(path);
+        return !path || this.ignorePattern.test(path);
     }
 
     apply(compiler) {
@@ -33,10 +35,10 @@ module.exports = class EmitAllPlugin {
                     const projectRoot = compiler.context;
                     const out = this.path || compiler.options.output.path;
 
-                    const dest = path.join(
-                        out,
+                    const relativePath = this.filenameTransform(
                         absolutePath.replace(projectRoot, '')
                     );
+                    const dest = path.join(out, relativePath);
 
                     compiler.outputFileSystem.mkdirp(
                         path.dirname(dest),
