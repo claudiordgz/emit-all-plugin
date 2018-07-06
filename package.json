@@ -1,6 +1,6 @@
 {
   "name": "emit-all-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Based on webpack-emit-all-plugin",
   "main": "index.js",
   "engines": {
